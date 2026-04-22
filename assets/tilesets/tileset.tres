@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" format=3 uid="uid://dehoj757hb1uo"]
 
-[ext_resource type="Texture2D" uid="uid://c6i7otlicu67g" path="res://spritesheet.png" id="1_e3020"]
+[ext_resource type="Texture2D" uid="uid://c6i7otlicu67g" path="res://assets/spritesheets/spritesheet.png" id="1_rlrdu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujgj0"]
-texture = ExtResource("1_e3020")
+texture = ExtResource("1_rlrdu")
 texture_region_size = Vector2i(32, 32)
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)
@@ -39,8 +39,10 @@ texture_region_size = Vector2i(32, 32)
 10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)
 10:1/0/custom_data_0 = true
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)
 0:2/0/custom_data_0 = true
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)
 1:2/0/custom_data_0 = true
 2:2/0 = 0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)

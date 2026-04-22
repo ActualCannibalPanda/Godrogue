@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var layer: TileMapLayer = $TileMapLayer2
+@onready var layer: TileMapLayer = $TileMapLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,11 +18,11 @@ func _draw() -> void:
 			#draw_circle(layer.map_to_local(cell), 10, Color.RED)
 			var local = layer.map_to_local(cell)
 			var points = []
+			var color = Color(randf(),randf(),randf(),1)
 			if tile_data.get_collision_polygons_count(0) > 0:
-				for point in tile_data.get_collision_polygon_points(0, 0):
-					var global = get_viewport().get_canvas_transform().affine_inverse() * local
-					points.push_back(get_viewport().get_canvas_transform() * (global + point))
-				
-				if len(points) >= 3:
-					draw_polygon(points, [Color.RED, Color.RED,Color.RED,Color.RED])
-				
+				for i in range(tile_data.get_collision_polygons_count(0)):
+					for point in tile_data.get_collision_polygon_points(0, i):
+						points.push_back(local + point + layer.position)
+					
+					if len(points) >= 3:
+						draw_polygon(points, [Color.RED, Color.RED, Color.RED, Color.RED])
