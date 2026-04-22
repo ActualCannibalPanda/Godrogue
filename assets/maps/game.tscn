@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://c7mh3skoidmh0"]
 
+[ext_resource type="Script" uid="uid://c0sy1ro6gsepi" path="res://scripts/map_controller.gd" id="1_t3nk2"]
 [ext_resource type="PackedScene" uid="uid://ckow25o3lsh3s" path="res://assets/maps/map.tscn" id="2_yr58m"]
+[ext_resource type="PackedScene" uid="uid://bjmsudn02xwnp" path="res://assets/maps/player.tscn" id="3_7h50t"]
 
 [node name="Node2D" type="Node2D" unique_id=403646205]
+script = ExtResource("1_t3nk2")
 
 [node name="Tiles" parent="." unique_id=462645518 instance=ExtResource("2_yr58m")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1769008352]
-position = Vector2(157, 93)
+position = Vector2(114, 24)
 zoom = Vector2(3.235, 3.235)
+
+[node name="Player" parent="." unique_id=1520361422 instance=ExtResource("3_7h50t")]
+position = Vector2(-1, 40)

@@ -13,9 +13,16 @@ class Tile:
 var game_map: Array[Tile] = []
 
 
+func request() -> void:
+    Signals.get_current_tilemaps.emit(layers)
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    call_deferred("create_polygons")
+    # stop this for now
+    Signals.request_tilemaps.connect(request)
+    return
+    create_polygons()
 
 
 func create_polygons() -> void:
