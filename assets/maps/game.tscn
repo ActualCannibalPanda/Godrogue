@@ -1,30 +1,10 @@
 [gd_scene format=3 uid="uid://c7mh3skoidmh0"]
 
 [ext_resource type="PackedScene" uid="uid://ckow25o3lsh3s" path="res://assets/maps/map.tscn" id="2_yr58m"]
-[ext_resource type="Script" uid="uid://uqk0fywiexcv" path="res://scripts/character_body_2d.gd" id="3_f7vh6"]
-[ext_resource type="Texture2D" uid="uid://bw50rjwesqgl2" path="res://icon.svg" id="4_r6dsl"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_urblq"]
-radius = 4.1231055
 
 [node name="Node2D" type="Node2D" unique_id=403646205]
 
 [node name="Tiles" parent="." unique_id=462645518 instance=ExtResource("2_yr58m")]
-
-[node name="NPC" type="CharacterBody2D" parent="." unique_id=1916027250]
-visible = false
-position = Vector2(62, 33)
-script = ExtResource("3_f7vh6")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPC" unique_id=1296356143]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC" unique_id=1143454429]
-shape = SubResource("CircleShape2D_urblq")
-disabled = true
-
-[node name="Sprite2D" type="Sprite2D" parent="NPC" unique_id=1397297578]
-scale = Vector2(0.051251754, 0.048611917)
-texture = ExtResource("4_r6dsl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1769008352]
 position = Vector2(157, 93)
