@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://ckow25o3lsh3s"]
 
 [ext_resource type="Script" uid="uid://ckcov2tptxw3d" path="res://scripts/tiles.gd" id="1_tqijr"]
-[ext_resource type="Script" uid="uid://b28flbh4smofb" path="res://assets/maps/mouse_visibility.gd" id="2_f35e3"]
+[ext_resource type="Script" uid="uid://b28flbh4smofb" path="res://scripts/mouse_visibility.gd" id="2_f35e3"]
 [ext_resource type="TileSet" uid="uid://dehoj757hb1uo" path="res://assets/tilesets/tileset.tres" id="3_mjhes"]
 
 [node name="Tiles" type="Node2D" unique_id=462645518]
