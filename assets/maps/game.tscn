@@ -15,10 +15,11 @@ position = Vector2(114, 24)
 zoom = Vector2(3.235, 3.235)
 
 [node name="Player" type="Node2D" parent="." unique_id=1520361422]
+z_index = 98
+position = Vector2(81, -26)
 script = ExtResource("2_7h50t")
 
 [node name="Player" type="CharacterBody2D" parent="Player" unique_id=1594201771]
-position = Vector2(31, 22)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Player" unique_id=189825019]
 shape = SubResource("CircleShape2D_bgjmr")
@@ -26,3 +27,5 @@ shape = SubResource("CircleShape2D_bgjmr")
 [node name="Sprite2D" type="Sprite2D" parent="Player/Player" unique_id=2075052088]
 scale = Vector2(0.10355866, 0.09433243)
 texture = ExtResource("3_1it7c")
+
+[editable path="Tiles"]

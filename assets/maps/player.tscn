@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_bgjmr"]
 
 [node name="Node2D" type="Node2D" unique_id=1098998661]
+z_index = 98
 script = ExtResource("1_ncdoi")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1520361422]
@@ -14,5 +15,6 @@ script = ExtResource("1_ncdoi")
 shape = SubResource("CircleShape2D_bgjmr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2075052088]
+z_index = 98
 scale = Vector2(0.10355866, 0.09433243)
 texture = ExtResource("2_0jq4s")

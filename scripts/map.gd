@@ -4,7 +4,7 @@ extends Node2D
 class Tile:
     var map_index: Vector2i
     var position: Vector2
-    var layer: TileMapLayer
+    var z_index: int
     var vertices: Array[Vector2]
 
 
@@ -23,6 +23,8 @@ func request() -> void:
 func _ready() -> void:
     # stop this for now
     Signals.request_tilemaps.connect(request)
+    for z in range(len(layers)):
+        layers[z].z_index = 90 + z
     #create_polygons()
 
 
