@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://c7mh3skoidmh0"]
 
-[ext_resource type="Script" uid="uid://c0sy1ro6gsepi" path="res://scripts/map_controller.gd" id="1_t3nk2"]
+[ext_resource type="Script" uid="uid://by3prm8a3dlsn" path="res://scripts/player.gd" id="2_7h50t"]
 [ext_resource type="PackedScene" uid="uid://ckow25o3lsh3s" path="res://assets/maps/map.tscn" id="2_yr58m"]
-[ext_resource type="PackedScene" uid="uid://bjmsudn02xwnp" path="res://assets/maps/player.tscn" id="3_7h50t"]
+[ext_resource type="Texture2D" uid="uid://bw50rjwesqgl2" path="res://icon.svg" id="3_1it7c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bgjmr"]
 
 [node name="Node2D" type="Node2D" unique_id=403646205]
-script = ExtResource("1_t3nk2")
 
 [node name="Tiles" parent="." unique_id=462645518 instance=ExtResource("2_yr58m")]
 
@@ -13,5 +14,15 @@ script = ExtResource("1_t3nk2")
 position = Vector2(114, 24)
 zoom = Vector2(3.235, 3.235)
 
-[node name="Player" parent="." unique_id=1520361422 instance=ExtResource("3_7h50t")]
-position = Vector2(-1, 40)
+[node name="Player" type="Node2D" parent="." unique_id=1520361422]
+script = ExtResource("2_7h50t")
+
+[node name="Player" type="CharacterBody2D" parent="Player" unique_id=1594201771]
+position = Vector2(31, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Player" unique_id=189825019]
+shape = SubResource("CircleShape2D_bgjmr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Player" unique_id=2075052088]
+scale = Vector2(0.10355866, 0.09433243)
+texture = ExtResource("3_1it7c")
